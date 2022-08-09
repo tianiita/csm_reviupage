@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;500&family=Monoton&family=Righteous&family=Stick+No+Bills:wght@800&display=swap');
+
+html {
+    scroll-padding-top: 70px;
+}
+
+h1 {
+    font-family: 'Stick No Bills', sans-serif;
+    font-size: 6em;
+    color: rgb(247, 169, 141);
+    text-shadow: 2px 3px 4px rgb(53, 18, 2);
+}    
+
+body {
+    background-color: bisque;
+    font-family: 'Noto Sans', sans-serif;
+    color: rgb(53, 18, 2);
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: inline;
+}
+
+#header {
+    padding: 1px;
+    background-image: url('../gambar/cover.png');
+    background-position: center;
+    background-size: cover;
+}
+
+/* navigasi */
+
+nav {
+    top: 0;
+    padding: 0px;
+    background-color: rgb(243, 143, 97);
+    position: sticky;
+    z-index: 9999;
+}
+
+nav ul {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Righteous', cursive;
+    color: white;
+    padding: 2px 0px;
+    margin: 20px;
+}
+
+nav a:hover {
+    color: rgb(53, 18, 2);
+}
+
+.chara-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.chara-button {
+    top: 0;
+    font-size: inherit;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    padding: inherit;
+    font-family: inherit;
+}
+
+.chara-content {
+    display: none;
+    position: absolute;
+    background-color: bisque;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 160px;
+}
+
+.chara-content a {
+    color: rgb(53, 18, 2);
+    padding: inherit;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+}
+
+.chara-content a:hover {
+    color:rgb(243, 102, 60);
+}
+
+.chara-dropdown:hover .chara-content {display: block;}
+
+/* navigasi */
+
+main {
+    padding: 20px;
+    overflow: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-top: 20px;
+    background-color:rgb(243, 234, 230);
+    overflow: auto;
+}
+
+h2, h3 {
+    color: darksalmon;
+    text-align: left;
+}
+
+p {
+    text-align: justify;
+}
+
+#content {
+    float: center;
+    width: 80%;
+    padding: 20px;
+    margin: 0 auto;
+    line-height: 0.75cm;
+}
+
+.vol-1, .vol-11 {
+    width: 275px;
+    padding: 10px;
+    display: block;
+    float: right;
+    margin-left: 10px;
+    margin-top: 0;
+    margin-right: 0;
+}
+
+#desc1 {
+    width: 70%;
+}
+
+.fujimoto {
+    width: 150px;
+    display: inline-block;
+}
+
+#desc2 {
+    float: right;
+    width: 82%;
+    margin-top: 0;
+}
+
+#twitter {
+    color:rgb(243, 102, 60);
+    text-decoration: none;
+}
+
+.icon-img {
+    border-radius: 50%;
+    width: 125px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.chara {
+    display: inline-block;
+    padding: 10px;
+}
+
+#desc-chara {
+    float: right;
+    width: 85%;
+    margin-top: 0 auto;
+    margin-bottom: 0 auto;
+}
+
+/* slider */
+
+.csm-the-art {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.csm {
+    display: none;
+}
+
+.slider {
+    width: 100%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: salmon;
+    opacity: 0.5;
+    font-weight: bold;
+    font-size: 50px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.slide-caption {
+    color: white;
+    background:rgba(240, 138, 91, 0.178);
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.white {
+    color: rgb(43, 38, 38);
+    background: rgba(240, 138, 91, 0.74);
+}
+
+.numbertext {
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    font-size: 14px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* slider */
+
+.figure {
+    width: 250px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+#desc3 {
+    float: right;
+    width: 70%;
+    margin-top: 0;
+}
+
+.reference-list {
+    list-style-type:decimal;
+    word-break: break-all;    
+}
+
+#ref {
+    text-decoration: none;
+    color: rgb(139, 45, 1);
+}
+
+#twitter:hover, #ref:hover {
+    background-color: bisque;
+    text-decoration: underline;
+    color:rgb(243, 102, 60);
+}
+
+#twitter:active, #ref:active {
+    color: rgb(124, 76, 53);
+}
+
+aside {
+    width: 35%;
+    padding: 20px;
+    line-height: 0.75cm;
+    margin: 0 auto;
+    display: block;
+}
+
+.h2 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.aside {
+    text-align: center;
+}
+
+.display-pict {
+    border-radius: 50%;
+    width: 175px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header, #footer {
+    text-align: center;
+}
+
+@media screen and (max-width: 2560px) {
+    #desc1 {
+        width: 100%;
+    }
+    #desc2 {
+        width: 90%;
+    }
+    .chara {
+        padding: 15px;
+    }
+    #desc-chara {
+        width: 91%;
+        text-align: left;
+        margin-right: auto;
+    }
+    #desc3 {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 1950px) {
+    #desc1 {
+        width: 100%;
+    }
+    #desc2 {
+        width: 87%;
+    }
+    #desc-chara {
+        width: 89%;
+        text-align: justify;
+    }
+    #desc3 {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    #desc2 {
+        width: 82%;
+    }
+    #desc-chara {
+        width: 84%;
+    }
+    .chara {
+        padding: 3px;
+    }
+    #desc3 {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    #desc3 {
+        width: 68%;
+    }
+}
+
+@media screen and (max-width: 1181px) {
+    #desc2 {
+        width: 80%;
+    }
+
+    #desc3 {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 1077px) {
+    #desc2 {
+        width: 77%;
+    }
+    #desc-chara {
+        width: 77%;
+        margin-top: 0;
+    }
+    #desc3 {
+        width: 62%;
+    }
+}
+
+@media screen and (max-width: 987px) {
+    #desc1 {
+        width: auto;
+    }
+    #desc2 {
+        width: 72%;
+    }
+    #desc-chara {
+        width: 75%;
+    }
+    .chara {
+        padding: none;
+    }
+    .figure {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        display: block;
+    }
+    #desc3 {
+        width: auto;
+    }
+    aside {
+        width: 60%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 822px) {
+    #desc2 {
+        width: 68%;
+    }
+    #desc-chara {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 725px) {
+    .fujimoto {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        display: block;
+    }
+    #desc2 {
+        width: auto;
+    }
+    #desc-chara {
+        width: 100%;
+        float: none;
+    }
+    .vol-1,
+    .icon-img,
+    .vol-11 {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        display: block;
+        float: none;
+    }
+    #denji, #pochita, #makima, #power, #aki {
+        text-align: center;
+    }
+    nav a {
+        margin: 15px;
+    } 
+}
+
+@media screen and (max-width: 618px) {
+    #content,
+    aside {
+        width: 100%;
+        padding: 0;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    nav a {
+        font-size: 16.5px;
+        margin: 5px;
+    }
+    .chara-content {
+        min-width: 75px;
+    }
+    .chara-content a {
+        font-size: 15px;
+        margin: 10px;
+    }
+    .prev, .next {
+        font-size: 30px;
+    }
+    .slide-caption {
+        font-size: 10px;
+        padding: 0px;
+    }
+    .numbertext {
+        font-size: 7.5px;
+        padding: 2.5px;
+    }
+    .dot {
+        width: 7.5px;
+        height: 7.5px;
+    }
+}
+
+@media screen and (max-width: 363px) {
+    .vol-1,
+    .vol-11,
+    .figure,
+    .display-pict {
+        width: 100%;
+    }
+    .prev, .next {
+        font-size: 20px;
+    }
+}
+
+footer {
+    padding: 20px;
+    color: rgb(139, 57, 9);
+    background-color: rgb(243, 143, 97);
+    text-align: center;
+    font-weight: bold;
+    line-height: 0.75cm;
+}
